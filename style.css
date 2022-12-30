@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: linear-gradient(45deg, #001038,rgba(11, 106, 117, 0));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card{
+    /* height: 450px; */
+    width: 350px;
+    height: 190px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 15px 50px rgb(0,0,0,0.5);
+    transition: 0.5s;
+}
+.card:hover{
+    height: 450px;
+}
+.img{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0,0,0);
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: -50px;
+    box-shadow: 0 15px 50px rgb(0,0,0,0.5);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.card:hover .img{
+    width: 250px;
+    height: 250px;
+    transform: translateY(-50);
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.card .container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .container .data{
+    padding: 55px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(155px);
+}
+.card:hover .container .data{
+transform: translateY(0px);
+}
+.card .container .data h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(62, 61, 61);
+    line-height: 1.2rem;
+}
+.card .container .data span{
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+.card .container .data .data2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card .container .data2 h3{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(62, 61, 61);   
+    line-height: 1.2rem;
+
+}
+.card .container .data2 span{
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+.card .container .buttons
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.card .container .buttons button{
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #158082;
+    color: white;
+    cursor: pointer;
+    line-height: 1.2rem;
+}
+.card .container .buttons button:nth-child(2){
+    background-color: white;
+    color: rgb(62, 61, 61);
+    border: #158082 1px solid;
+}
